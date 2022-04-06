@@ -1,6 +1,6 @@
 # Diasaster_Response
 
-Is there a way with Machine Learning to decide who to sent best to an emergency by going through the textmessage coming in from social media, directly or from the news.
+Is there a way with Machine Learning to decide how to react best to an emergency by going through the textmessage coming in from social media, directly or from the news.
 
 ## Table of contents
 
@@ -12,7 +12,7 @@ Is there a way with Machine Learning to decide who to sent best to an emergency 
 
 ## Motivation
 
-Sometimes, especially during natural disasters such as earthquakes, fires,... the emergency control center has to go through a lot of information from media, direct calls etc. to decide who to sent out (firedepartment, police,....). So maybe there is a quicker way to find out which kind of help is needed? Thats what I try to find out here.
+Sometimes, especially during natural disasters such as earthquakes, fires,... the emergency control center has to go through a lot of information from media, direct calls etc. to decide how to react best (firedepartment, police,....). So maybe there is a quicker way to find out which kind of help is needed? Thats what I try to find out here.
 
 ## Installation
 
