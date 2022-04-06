@@ -21,13 +21,26 @@ Python 3.6 was used for the attached files. If you use anything esle you might n
 
 ## File description<a name="file-description"></a>
 
+Attached you'll find 3 folders:
+1. [app](#App-Folder)
+2. [data](#Data)
+3. [model](#Model)
 
+### App-Folder:<a name="App-Folder"></a> 
+In the app folder there is a file "run.py" which runs the app with all the results. And there is an additional folder called "templates". Here you find the "go.html" and the "master.html" for the app.
+
+### Data-Folder:<a name="Data"></a> 
+
+
+### Model-Folder:<a name="Model"></a>
+
+In addition to all those file there is this README.md which contains all the information needed for running this application.
 
 ## Results
 
 
 ## Licensing, Authors, Acknowledgements<a name="author"></a>
 
-Can't take credit for the data used for this project. The data was provided by Udicity (as well as the run.py file). The basic construct in go.html and master.html was also given to me by Udicity. The def main() in both the train_classifier.py and process_data.py was also provided by Udacity. For further information please go to there webpage:  https://www.udacity.com/
+Can't take credit for the data used for this project. The data was provided by Udicity (as well as the run.py file). The basic construct in go.html and master.html was also given to me by Udicity. The def main() in both the train_classifier.py and process_data.py was also provided by Udacity. For further information please go to their webpage:  https://www.udacity.com/
 
 Otherwise feel free to use my code.
