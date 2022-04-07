@@ -43,6 +43,6 @@ The results is the app. Here you can put in a message and find out how it is cla
 
 ## Licensing, Authors, Acknowledgements<a name="author"></a>
 
-Can't take credit for the data used for this project. The data was provided by Udicity (as well as the run.py file). The basic construct in go.html and master.html was also given to me by Udicity. The def main() in both the train_classifier.py and process_data.py was also provided by Udacity. For further information please go to their webpage:  https://www.udacity.com/
+Can't take credit for the data used for this project. The data was provided by Udicity (as well as the basic code for the python scripts). The basic construct in go.html and master.html was also given to me by Udicity. The def main() in both the train_classifier.py and process_data.py was also provided by Udacity. For further information please go to their webpage:  https://www.udacity.com/
 
 Otherwise feel free to use my code.
