@@ -66,7 +66,7 @@ def build_model():
     parameters = {
     'clf__estimator__n_estimators' : [20, 50],
     'clf__estimator__min_samples_split' : [4,6],
-    'clf__estimator__max_leaf_nodes' : [2, None]
+    #'clf__estimator__max_leaf_nodes' : [2, None]
     }
     
     # create gridsearch object and return as final model pipeline
@@ -75,8 +75,11 @@ def build_model():
     return model_pipeline
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    #pred Y_pred with model
     Y_pred = model.predict(X_test)
+    #print classification report and accuracy score
     for i, col in enumerate(Y_test):
+        print(col)
         print(classification_report(Y_test[col], Y_pred[:, i], target_names=category_names))
         print('Accuracy Score: {}'.format(accuracy_score(Y_test[col], Y_pred[:, i])))
     
@@ -84,6 +87,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 
 def save_model(model, model_filepath):
+    #create pkl file
     with open(model_filepath, 'wb') as f:
         pickle.dump(model, f)
 
