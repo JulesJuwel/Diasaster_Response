@@ -5,6 +5,10 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    Loading data from the given filepaths and merging 
+    it together to one data set df on the id-columns.
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     #merge data
@@ -13,6 +17,10 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    '''
+    Cleaning the data, especially category columns.
+    and dropping the duplicates.
+    '''
     categories = df.categories.str.split(';', expand = True)
     # create name for categories by using first row (there is a name and a value for each column here)
     row = list(categories.iloc[0])
@@ -28,6 +36,9 @@ def clean_data(df):
     # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
     
+    #column related has  a 2 in it --> not binary --> make a 1 out of it
+    categories = categories.replace(2, 1)
+    
     # replace categories column in df with new category colums
     df = df.drop(columns = ['categories'])
     df = pd.concat([df, categories], axis = 1)
@@ -35,13 +46,19 @@ def clean_data(df):
     # Remove duplicates
     df= df.drop_duplicates()
     
+    
+    
     return df
 
 
 def save_data(df, database_filename):
+    '''
+    Saving the data to a Database, and if
+    this databse exists then replace it.
+    '''
     text = 'sqlite:///'+database_filename
     engine = create_engine(text)
-    df.to_sql('Disaster_Julia', engine, index=False)
+    df.to_sql('Disaster_Julia', engine, if_exists='replace', index=False)
      
 
 

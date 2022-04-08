@@ -26,6 +26,11 @@ import pickle
 
 
 def load_data(database_filepath):
+    '''
+    loading data from Disaster_Julia and 
+    creating X,Y and category names for
+    the model
+    '''
     engine = create_engine(f'sqlite:///{database_filepath}')
     df = pd.read_sql_table('Disaster_Julia', engine)
     X = df.message.values 
@@ -55,6 +60,10 @@ def tokenize(text):
 
 
 def build_model():
+    '''
+    building model with pipeline and parameters and using
+    GridSearch object
+    '''
         
     # text processing and model pipeline
     pipeline = Pipeline([('vect', CountVectorizer(tokenizer=tokenize)), 
